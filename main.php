@@ -37,20 +37,20 @@ for (let i = 0; i < snowflakesCount; i++) {
 function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.className = 'snowflake';
-    snowflake.innerHTML = '.'; // Użyj symbolu płatka śniegu
+    snowflake.innerHTML = '.'; 
 
-    // Ustawienie losowej pozycji
+   
     snowflake.style.left = Math.random() * window.innerWidth + 'px';
-    snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Losowy rozmiar płatka
-    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Losowy czas spadania
-    snowflake.style.opacity = Math.random(); // Losowa przezroczystość
+    snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; 
+    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; 
+    snowflake.style.opacity = Math.random(); 
 
     document.body.appendChild(snowflake);
 
-    // Usunięcie płatka po animacji
+    
     snowflake.addEventListener('animationend', () => {
         snowflake.remove();
-        createSnowflake(); // Stwórz nowy płatek po zakończeniu animacji
+        createSnowflake(); 
     });
 }
 </script>
